@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral Colors */
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+
+/* Screen reader class to hide the content visually */
+.sr-only {
+    position: absolute !important;
+    margin: -1px !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+
+/*Primary positioning and sizing*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+}
+
+#main-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+/*Container Styling*/
+
+.card-container {
+    max-width: 53rem;
+    display: flex;
+}
+
+dl {
+    padding: 2.6rem;
+    min-width: 9rem;
+}
+
+.card1 {
+    background-color: var(--Bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+
+
+.card2 {
+    background-color: var(--Dark-cyan);
+}
+
+
+
+.card3 {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+
+/*Text Styling*/
+
+.card1 a {
+    color: var(--Bright-orange);
+}
+
+
+.card2 a {
+    color: var(--Dark-cyan);
+}
+
+.card3 a {
+    color: var(--Very-dark-cyan);
+}
+
+dl a {
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    padding: 0.9rem 2.1rem;
+    border-radius: 2rem;
+    display: inline-block;
+    background-color: var(--Very-light-gray);
+    margin-top: 4rem;
+    border: var(--Very-light-gray) 3px solid;
+    text-align: center;
+}
+
+
+h2 {
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    margin: 1.3rem auto;
+}
+
+p {
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+/*Hover State*/
+
+dl a:hover {
+    background-color: inherit;
+    color: var(--Very-light-gray);
+    border: 3px solid var(--Very-light-gray);
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 840px) {
+    .card-container {
+        flex-direction: column;
+        max-width: 80%;
+        margin: 5rem auto;
+    }
+
+    button {
+        margin-top: 2rem;
+    }
+
+    .card1 {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card3 {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+}
+
+
+/*Attribution styling*/
+
+.attribution {
+    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #5800FF
+}
