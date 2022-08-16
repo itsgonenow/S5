@@ -169,6 +169,14 @@ p {
 }
 
 
+@media (max-width: 280px)
+{ html {font-size: 80%;}
+
+.cards a {padding: 0.5rem 1.3rem; } 
+
+}
+
+
 /*Attribution styling*/
 
 .attribution {
